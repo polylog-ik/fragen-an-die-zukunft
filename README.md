@@ -1,2 +1,2 @@
 # oeffentlicher-polylog
-Ich und die anderen - Polylog zur Öffentlichkeit
+Ich und die anderen - wanderndes, öffentliches Gespräch.
