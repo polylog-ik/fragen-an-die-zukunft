@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Polylog(ik) – Fragen an die Zukunft</title>
+  <meta name="description" content="Polylog(ik) – Fragen an die Zukunft. Versuch eines wandernden Schwarmgesprächs." />
+
+  <style>
+    :root{
+      --bg:#0b0c10;
+      --panel:#111318;
+      --card:#151823;
+      --text:#e8e8ea;
+      --muted:#b6b6bd;
+      --line:#262a36;
+      --bubbleA:#1b2130;
+      --bubbleB:#1a2a22;
+      --accent:#7bd88f;
+      --link:#8ab4ff;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(1200px 700px at 20% 0%, #14172a 0%, var(--bg) 55%);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:var(--link); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:980px; margin:0 auto; padding:28px 16px 56px;}
+    header{
+      display:flex; flex-direction:column; gap:10px;
+      padding:18px 18px 14px;
+      border:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(21,24,35,.92), rgba(17,19,24,.82));
+      border-radius:16px;
+    }
+    .kicker{color:var(--muted); font-size:0.95rem}
+    h1{margin:0; font-size:1.55rem; letter-spacing:0.2px}
+    h2{margin:0; font-size:1.05rem; font-weight:600; color:var(--muted)}
+    .pillrow{display:flex; flex-wrap:wrap; gap:8px; margin-top:6px}
+    .pill{
+      font-size:0.9rem;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,0.03);
+      padding:6px 10px;
+      border-radius:999px;
+      color:var(--muted);
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap:16px;
+      margin-top:16px;
+    }
+    @media (max-width: 860px){
+      .grid{grid-template-columns:1fr}
+    }
+
+    .panel{
+      border:1px solid var(--line);
+      background: rgba(17,19,24,.72);
+      border-radius:16px;
+      overflow:hidden;
+    }
+    .panelhead{
+      padding:12px 14px;
+      border-bottom:1px solid var(--line);
+      display:flex; align-items:center; justify-content:space-between;
+      gap:10px;
+      background: rgba(255,255,255,0.02);
+    }
+    .panelhead strong{font-size:0.95rem}
+    .small{color:var(--muted); font-size:0.9rem}
+
+    /* Chat mock */
+    .chat{
+      padding:14px;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      background: linear-gradient(180deg, rgba(0,0,0,0.0), rgba(0,0,0,0.12));
+      min-height: 360px;
+    }
+    .bubble{
+      max-width: 92%;
+      border:1px solid var(--line);
+      padding:10px 12px;
+      border-radius:14px;
+      background: var(--bubbleA);
+      box-shadow: 0 8px 26px rgba(0,0,0,0.25);
+    }
+    .bubble.you{align-self:flex-end; background: var(--bubbleB)}
+    .meta{
+      display:flex; gap:8px; align-items:center;
+      margin-bottom:6px;
+      color:var(--muted); font-size:0.82rem;
+    }
+    .dot{width:6px;height:6px;border-radius:50%;background:var(--accent); display:inline-block}
+    .ctaRow{
+      display:flex; flex-wrap:wrap; gap:10px;
+      padding:12px 14px;
+      border-top:1px solid var(--line);
+      background: rgba(255,255,255,0.02);
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,0.04);
+      color:var(--text);
+      padding:10px 12px;
+      border-radius:12px;
+      font-size:0.95rem;
+    }
+    .btn:hover{background: rgba(255,255,255,0.07)}
+    .btn.primary{
+      border-color: rgba(123,216,143,0.45);
+      background: rgba(123,216,143,0.10);
+    }
+
+    /* Abstract card */
+    .card{padding:14px}
+    details{
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:10px 12px;
+      background: rgba(255,255,255,0.02);
+    }
+    details + details{margin-top:10px}
+    summary{cursor:pointer; font-weight:600}
+    .muted{color:var(--muted)}
+    .note{
+      margin-top:12px;
+      padding:10px 12px;
+      border-left:3px solid rgba(123,216,143,0.55);
+      background: rgba(123,216,143,0.06);
+      border-radius:10px;
+      color:var(--text);
+    }
+    footer{
+      margin-top:18px;
+      color:var(--muted);
+      font-size:0.9rem;
+      padding: 0 6px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="kicker">Polylog(ik)</div>
+      <h1>Fragen an die Zukunft</h1>
+      <h2>Versuch eines wandernden Schwarmgesprächs</h2>
+
+      <div class="pillrow">
+        <span class="pill">Heute startet die Aktion</span>
+        <span class="pill">Nächste Woche: Audios hier</span>
+        <span class="pill">Format: Audio-Polylog im Chat-Layout</span>
+      </div>
+    </header>
+
+    <div class="grid">
+      <!-- Left: Chat mock -->
+      <section class="panel">
+        <div class="panelhead">
+          <strong>Polylog (Vorschau)</strong>
+          <span class="small">Die Stimmen erscheinen als abspielbare „Chat“-Beiträge.</span>
+        </div>
+
+        <div class="chat">
+          <div class="bubble">
+            <div class="meta"><span class="dot"></span><span>Impuls</span><span class="muted">• Vorschau</span></div>
+            <div><strong>Welche Fragen trägt ihr mit euch herum?</strong><br>
+              <span class="muted">Unterwegs sammeln wir Stimmen und Fragen — über, an und in die Zukunft.</span>
+            </div>
+          </div>
+
+          <div class="bubble you">
+            <div class="meta"><span class="dot"></span><span>Echo</span><span class="muted">• Vorschau</span></div>
+            <div><strong>Was schwingt mit? Was hallt nach?</strong><br>
+              <span class="muted">Jede Perspektive wirkt in die nächste Begegnung hinein.</span>
+            </div>
+          </div>
+
+          <div class="bubble">
+            <div class="meta"><span class="dot"></span><span>Platzhalter</span><span class="muted">• Audio folgt</span></div>
+            <div class="muted">
+              Ab nächster Woche stehen hier die Aufnahmen als Player — Beitrag für Beitrag.
+            </div>
+          </div>
+
+          <div class="note">
+            <strong>Update:</strong> Heute beginnt die Wanderung. Updates & Live-Standort laufen über Telegram.
+            Der gesamte Polylog wird anschließend hier veröffentlicht.
+          </div>
+        </div>
+
+        <div class="ctaRow">
+          <a class="btn primary" href="https://t.me/polylog_ik" target="_blank" rel="noopener">Telegram: Updates / Live /Diskussion</a>
+          <!-- WhatsApp später ergänzen, wenn ihr den Invite-Link habt -->
+          <!-- <a class="btn" href="https://chat.whatsapp.com/DEIN_INVITE" target="_blank" rel="noopener">WhatsApp: Updates / Live /Diskussion</a> -->
+        </div>
+      </section>
+
+      <!-- Right: Abstract -->
+      <aside class="panel">
+        <div class="panelhead">
+          <strong>Abstract</strong>
+          <span class="small">DE / EN</span>
+        </div>
+
+        <div class="card">
+          <details open>
+            <summary>Deutsch</summary>
+            <p><strong>++++ English below ++++</strong></p>
+
+            <p>Wo befinden wir uns in Raum und Zeit, im Weltgeschehen? An einem außergewöhnlichen Punkt? Sieht das immer so aus? Oder wirklich an einer Schwelle?</p>
+
+            <p>Sicherlich in einer Phase der Umbrüche und Übergänge – die viele Fragen aufwerfen und offenlassen.</p>
+
+            <p>Doch welche Fragen sind das? Und wer darf sie stellen, bewegen und beantworten?</p>
+
+            <p>Mit dem Mikrofon in der Hand und dem Blick auf den Ereignishorizont gerichtet, begeben wir uns am <strong>16. Januar</strong> auf Wanderschaft durch Leipzig zu einer partizipativen Intervention in öffentlichen Räumen. Unterwegs sammeln und streuen wir Stimmen und Fragen – über, an und in die Zukunft. Wir wollen gemeinsam versuchen, über soziale Grenzen hinaus Steine, Gedanken und Perspektiven ins Rollen zu bringen.</p>
+
+            <p>Das Projekt lädt dazu ein, Vorstellungen und Unsicherheiten, Wünsche und Hoffnungen zu teilen und sich von fremden Stimmen und Blickwinkeln bewegen zu lassen.</p>
+
+            <p>Den weiten Raum der Zukunft erkunden wir dazu mit einem einfachen Muster: <strong>Jede Perspektive und Frage wirkt in die nächste Begegnung hinein.</strong></p>
+
+            <p>So nehmen und geben wir Gedankenfäden auf und ab, weben gemeinsam ein Geflecht. Impulse, Fragen und Ansichten können sich gegenseitig verschieben, verstärken, reflektieren. Was schwingt mit? Was hallt nach, wenn Stimmen sich begegnen? Werden Reiz und Reaktion, Widerspruch und Resonanz sich im Polylog verbinden?</p>
+
+            <p><strong>Ein Experiment.</strong> (Wie letztlich alles?)</p>
+
+            <p>“Fragend schreiten wir voran” (Zapatistas)</p>
+
+            <p class="muted"><strong>Updates, Live-Standort und Audios:</strong> Telegram-Link oben.</p>
+            <p class="muted"><strong>Den gesamten Polylog</strong> gibt’s anschließend hier auf der Website.</p>
+          </details>
+
+          <details>
+            <summary>English</summary>
+            <p>Where are we situated in the course of world events, in space and time? At an extraordinary moment? Does it always feel like this? Or are we standing at a threshold?</p>
+
+            <p>We are certainly living in a phase of upheaval and transition – one that raises many questions and leaves many unanswered. But which questions are these? And who gets to ask them, to carry them forward, to respond?</p>
+
+            <p>With a microphone in hand and our gaze fixed on the event horizon, we set out on <strong>January 16</strong> on a walk through Leipzig: a participatory intervention in public space. Along the way, we collect and circulate voices and questions – addressed to, about, and from the future. Together, we try to set stones, thoughts, and perspectives in motion across social boundaries.</p>
+
+            <p>The intervention invites participants to share ideas and uncertainties, hopes and wishes about the future – and to allow themselves to be moved by unfamiliar voices and viewpoints.</p>
+
+            <p>We explore the wide space of the future through a simple pattern: <strong>each perspective and each question carries over into the next encounter.</strong></p>
+
+            <p>In this way, we pick up and pass on threads of thought, weaving a shared mesh. Impulses, questions, and positions can shift, amplify, and reflect one another — until stimulus and response, contradiction and resonance begin to intertwine in a polylogue.</p>
+
+            <p><strong>An experiment.</strong> (As everything ultimately is.)</p>
+
+            <p>…We move forward by asking questions. (Zapatistas)</p>
+
+            <p class="muted"><strong>Updates, live locations, and audio recordings:</strong> see Telegram link above.</p>
+            <p class="muted"><strong>The entire polylogue</strong> will later be published here on this website.</p>
+          </details>
+
+          <div class="note">
+            <strong>Hinweis:</strong> Heute startet die Aktion. Die Ergebnisse werden nächste Woche hier sichtbar.
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      <div class="muted">
+        (Kontakt / Widerruf-Link können später ergänzt werden.)
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
