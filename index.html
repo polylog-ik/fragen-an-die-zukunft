@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Polylog(ik) – Fragen an die Zukunft</title>
-  <meta name="description" content="Polylog(ik) – Fragen an die Zukunft. Versuch eines wandernden Schwarmgesprächs." />
+  <title>Polylog_ik – Fragen an die Zukunft</title>
+  <meta name="description" content="Polylog_ik – Fragen an die Zukunft. Versuch eines wandernden Schwarmgesprächs." />
 
   <style>
     :root{
@@ -157,6 +157,14 @@
     border-radius: 8px;
     accent-color: var(--accent);
     }
+    .mapframe {
+    width: 100%;
+    height: 160px;
+    border-radius: 10px;
+    margin-top: 8px;
+    overflow: hidden;
+    }
+
   </style>
 </head>
 
@@ -167,11 +175,11 @@
   <h2>Versuch eines wandernden Schwarmgesprächs</h2>
 
 
-      <div class="pillrow">
-        <span class="pill">Heute startet die Aktion</span>
-        <span class="pill">Nächste Woche: Audios hier</span>
-        <span class="pill">Format: Audio-Polylog im Chat-Layout</span>
-      </div>
+      <!div class="pillrow">
+        <!span class="pill">Heute startet die Aktion</!span>
+        <!span class="pill">Nächste Woche: Audios hier</!span>
+        <!span class="pill">Format: Audio-Polylog im Chat-Layout</!span>
+      <!/div>
     </header>
 
     <div class="grid">
@@ -184,68 +192,132 @@
 
         <div class="chat">
 
+                  <!-- polylog_ik: Startpunkt -->
+          <div class="bubble you">
+            <div class="meta"><span class="dot"></span><span>polylog_ik</span><span class="muted">• Standort 1</span></div>
+            <div><strong>Wir starten.</strong></div>
+            <div class="mapframe" id="map-1"></div>
+          </div>
+          
           <div class="bubble">
-              <div class="meta"><span class="dot"></span><span>Pseudonym_01</span><span class="muted">• Beitrag 1</span></div>
+              <div class="meta"><span class="dot"></span><span>Dystopie</span><span class="muted">• Beitrag 1</span></div>
                   <div><strong>Kurztitel oder erste Worte des Beitrags</strong></div>
-                  <audio controls src="audio/beitrag-01.mp3"></audio>
+                  <audio controls src="audio/beitrag01.mp3"></audio>
           </div>
-        
+
+           <!-- polylog_ik: Standort 2 -->
           <div class="bubble you">
-              <div class="meta"><span class="dot"></span><span>Pseudonym_02</span><span class="muted">• Beitrag 2</span></div>
+            <div class="meta"><span class="dot"></span><span>polylog_ik</span><span class="muted">• Standort 2</span></div>
+            <div></div>
+            <div class="mapframe" id="map-2"></div>
+          </div>
+                  
+          
+          <div class="bubble">
+              <div class="meta"><span class="dot"></span><span>Alex</span><span class="muted">• Beitrag 2</span></div>
                   <div><strong>Kurztitel oder erste Worte des Beitrags</strong></div>
-                  <audio controls src="audio/beitrag-02.mp3"></audio>
+                  <audio controls src="audio/beitrag02.mp3"></audio>
           </div>
-        
-          <div class="bubble">
-              <div class="meta"><span class="dot"></span><span>Pseudonym_03</span><span class="muted">• Beitrag 3</span></div>
-              <div><strong>Kurztitel oder erste Worte des Beitrags</strong></div>
-              <audio controls src="audio/beitrag-03.mp3"></audio>
-          </div>
-        
+          
           <div class="bubble you">
-              <div class="meta"><span class="dot"></span><span>Pseudonym_04</span><span class="muted">• Beitrag 4</span></div>
-              <div><strong>Kurztitel oder erste Worte des Beitrags</strong></div>
-              <audio controls src="audio/beitrag-04.mp3"></audio>
+              <div class="meta"><span class="dot"></span><span>polylog_ik</span><span class="muted">• Standort 3</span></div>
+                  <div></div>
+                  <div class="mapframe" id="map-3"></div>
           </div>
-        
+            
           <div class="bubble">
-              <div class="meta"><span class="dot"></span><span>Pseudonym_05</span><span class="muted">• Beitrag 5</span></div>
+              <div class="meta"><span class="dot"></span><span>Delphin</span><span class="muted">• Beitrag 3</span></div>
               <div><strong>Kurztitel oder erste Worte des Beitrags</strong></div>
-              <audio controls src="audio/beitrag-05.mp3"></audio>
+              <audio controls src="audio/beitrag03.mp3"></audio>
           </div>
-        
+
           <div class="bubble you">
-              <div class="meta"><span class="dot"></span><span>Pseudonym_06</span><span class="muted">• Beitrag 6</span></div>
-              <div><strong>Kurztitel oder erste Worte des Beitrags</strong></div>
-              <audio controls src="audio/beitrag-06.mp3"></audio>
+              <div class="meta"><span class="dot"></span><span>polylog_ik</span><span class="muted">• Standort 4</span></div>
+                  <div></div>
+                  <div class="mapframe" id="map-4"></div>
           </div>
-        
+          
           <div class="bubble">
-              <div class="meta"><span class="dot"></span><span>Pseudonym_07</span><span class="muted">• Beitrag 7</span></div>
+              <div class="meta"><span class="dot"></span><span>Chico</span><span class="muted">• Beitrag 4</span></div>
               <div><strong>Kurztitel oder erste Worte des Beitrags</strong></div>
-              <audio controls src="audio/beitrag-07.mp3"></audio>
+              <audio controls src="audio/beitrag04.mp3"></audio>
           </div>
-        
+
           <div class="bubble you">
-              <div class="meta"><span class="dot"></span><span>Pseudonym_08</span><span class="muted">• Beitrag 8</span></div>
-              <div><strong>Kurztitel oder erste Worte des Beitrags</strong></div>
-              <audio controls src="audio/beitrag-08.mp3"></audio>
+              <div class="meta"><span class="dot"></span><span>polylog_ik</span><span class="muted">• Standort 5</span></div>
+                  <div></div>
+                  <div class="mapframe" id="map-5"></div>
           </div>
-        
+          
           <div class="bubble">
-              <div class="meta"><span class="dot"></span><span>Pseudonym_09</span><span class="muted">• Beitrag 9</span></div>
+              <div class="meta"><span class="dot"></span><span>Kalender</span><span class="muted">• Beitrag 5</span></div>
               <div><strong>Kurztitel oder erste Worte des Beitrags</strong></div>
-              <audio controls src="audio/beitrag-09.mp3"></audio>
+              <audio controls src="audio/beitrag05.mp3"></audio>
           </div>
-        
+
           <div class="bubble you">
-              <div class="meta"><span class="dot"></span><span>Pseudonym_10</span><span class="muted">• Beitrag 10</span></div>
-              <div><strong>Kurztitel oder erste Worte des Beitrags</strong></div>
-              <audio controls src="audio/beitrag-10.mp3"></audio>
+              <div class="meta"><span class="dot"></span><span>polylog_ik</span><span class="muted">• Standort 6</span></div>
+                  <div></div>
+                  <div class="mapframe" id="map-6"></div>
           </div>
-        
+          
+          <div class="bubble">
+              <div class="meta"><span class="dot"></span><span>Corli und Mimi</span><span class="muted">• Beitrag 6</span></div>
+              <div><strong>Kurztitel oder erste Worte des Beitrags</strong></div>
+              <audio controls src="audio/beitrag06.mp3"></audio>
+          </div>
+
+          <div class="bubble you">
+              <div class="meta"><span class="dot"></span><span>polylog_ik</span><span class="muted">• Standort 7</span></div>
+                  <div></div>
+                  <div class="mapframe" id="map-7"></div>
+          </div>
+          
+          <div class="bubble">
+              <div class="meta"><span class="dot"></span><span>Frosch</span><span class="muted">• Beitrag 7</span></div>
+              <div><strong>Kurztitel oder erste Worte des Beitrags</strong></div>
+              <audio controls src="audio/beitrag07.mp3"></audio>
+          </div>
+
+          <div class="bubble you">
+              <div class="meta"><span class="dot"></span><span>polylog_ik</span><span class="muted">• Standort 8</span></div>
+                  <div></div>
+                  <div class="mapframe" id="map-8"></div>
+          </div>
+          
+          <div class="bubble">
+              <div class="meta"><span class="dot"></span><span>James</span><span class="muted">• Beitrag 8</span></div>
+              <div><strong>Kurztitel oder erste Worte des Beitrags</strong></div>
+              <audio controls src="audio/beitrag08.mp3"></audio>
+          </div>
+
+          <div class="bubble you">
+              <div class="meta"><span class="dot"></span><span>polylog_ik</span><span class="muted">• Standort 9</span></div>
+                  <div></div>
+                  <div class="mapframe" id="map-9"></div>
+          </div>
+          
+          <div class="bubble">
+              <div class="meta"><span class="dot"></span><span>Emil</span><span class="muted">• Beitrag 9</span></div>
+              <div><strong>Kurztitel oder erste Worte des Beitrags</strong></div>
+              <audio controls src="audio/beitrag09.mp3"></audio>
+          </div>
+
+          <div class="bubble you">
+              <div class="meta"><span class="dot"></span><span>polylog_ik</span><span class="muted">• Standort 10</span></div>
+                  <div></div>
+                  <div class="mapframe" id="map-10"></div>
+          </div>
+          
+          <div class="bubble">
+              <div class="meta"><span class="dot"></span><span>Felicitas und Rami</span><span class="muted">• Beitrag 10</span></div>
+              <div><strong>Kurztitel oder erste Worte des Beitrags</strong></div>
+              <audio controls src="audio/beitrag10.mp3"></audio>
+          </div>
+
+          
           <div class="note">
-              <strong>Hinweis:</strong> Alle Beiträge wurden am 16. Januar 2025 während der Wanderung durch Leipzig aufgenommen.
+              <strong>Hinweis:</strong> Alle Beiträge wurden am 16. Januar 2025 während der Wanderung durch Leipzig aufgenommen. Die Teilnehmer:innen haben ihre Zustimmung für die Veröffentlichung erteilt. Ihre Pseudonyme sind selbstgewählt.
           </div>
         
         </div>
@@ -327,5 +399,34 @@
       </div>
     </footer>
   </div>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  
+  <script>
+  const stops = [
+    { id: 'map-1',  lat: 51.33901, lng: 12.40353, label: 'Standort 1 – 13:09 Uhr' },
+    { id: 'map-2',  lat: 51.34445, lng: 12.40419, label: 'Standort 2 – 14:20 Uhr' },
+    { id: 'map-3',  lat: 51.34500, lng: 12.40443, label: 'Standort 3 – 14:38 Uhr' },
+    { id: 'map-4',  lat: 51.34569, lng: 12.40288, label: 'Standort 4 – 15:13 Uhr' },
+    { id: 'map-5',  lat: 51.34381, lng: 12.37201, label: 'Standort 5 – 16:51 Uhr' },
+    { id: 'map-6',  lat: 51.34343, lng: 12.37359, label: 'Standort 6' },
+    { id: 'map-7',  lat: 51.34343, lng: 12.37462, label: 'Standort 7' },
+    { id: 'map-8',  lat: 51.34241, lng: 12.37526, label: 'Standort 8' },
+    { id: 'map-9',  lat: 51.33848, lng: 12.37468, label: 'Standort 9' },
+    { id: 'map-10', lat: 51.33209, lng: 12.33411, label: 'Standort 10' },
+  ];
+  
+  stops.forEach(stop => {
+    const el = document.getElementById(stop.id);
+    if (!el) return;
+    const map = L.map(el, { zoomControl: false, attributionControl: false, scrollWheelZoom: false })
+                 .setView([stop.lat, stop.lng], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+    L.circleMarker([stop.lat, stop.lng], {
+      radius: 8, color: '#7bd88f', fillColor: '#7bd88f', fillOpacity: 0.9
+    }).bindPopup(stop.label).addTo(map);
+  });
+  </script>
+
 </body>
 </html>
