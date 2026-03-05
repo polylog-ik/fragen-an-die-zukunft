@@ -7,23 +7,24 @@
   <meta name="description" content="Polylog_ik – Fragen an die Zukunft. Versuch eines wandernden Schwarmgesprächs." />
 
   <style>
-    :root{
-      --bg:#0b0c10;
-      --panel:#111318;
-      --card:#151823;
-      --text:#e8e8ea;
-      --muted:#b6b6bd;
-      --line:#262a36;
-      --bubbleA:#1b2130;
-      --bubbleB:#1a2a22;
-      --accent:#7bd88f;
-      --link:#8ab4ff;
-    }
+    :root {
+      --bg:      #0e0a1a;   /* fast schwarz, violett unterton */
+      --panel:   #150f28;   /* dunkles Aubergine */
+      --card:    #1c1436;   /* mittleres Violett */
+      --text:    #ede8f5;   /* leicht lila-weißes Textgrau */
+      --muted:   #a89bc2;   /* gedämpftes Lavendel */
+      --line:    #2e2050;   /* Trennlinien in Mitternachtsviolett */
+      --bubbleA: #1a1132;   /* linke Bubbles */
+      --bubbleB: #1f1040;   /* rechte Bubbles (polylog_ik) */
+      --accent:  #c084fc;   /* Neon-Lila (war grün) */
+      --link:    #67e8f9;   /* Cyan für Links */
+}
+
     *{box-sizing:border-box}
     body{
       margin:0;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      background: radial-gradient(1200px 700px at 20% 0%, #14172a 0%, var(--bg) 55%);
+      background: radial-gradient(1200px 700px at 20% 0%, #1e0a3c 0%, #0e0a1a 55%);
       color:var(--text);
       line-height:1.55;
     }
@@ -419,12 +420,13 @@
   stops.forEach(stop => {
     const el = document.getElementById(stop.id);
     if (!el) return;
-    const map = L.map(el, { zoomControl: false, attributionControl: false, scrollWheelZoom: false })
-                 .setView([stop.lat, stop.lng], 15);
+    const map = L.map(el, { zoomControl: true, attributionControl: false, scrollWheelZoom: false })
+                 .setView([stop.lat, stop.lng], 14);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
     L.circleMarker([stop.lat, stop.lng], {
-      radius: 8, color: '#7bd88f', fillColor: '#7bd88f', fillOpacity: 0.9
-    }).bindPopup(stop.label).addTo(map);
+        radius: 8, color: '#c084fc', fillColor: '#c084fc', fillOpacity: 0.9
+        }).bindPopup(stop.label).addTo(map);
+
   });
   </script>
 
