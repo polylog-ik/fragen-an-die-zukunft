@@ -1,2 +1,2 @@
-# oeffentlicher-polylog
-Ich und die anderen - wanderndes, öffentliches Gespräch.
+# Polylog_ik - Fragen an die Zukunft
+Versuch eines wandernden Schwarmgesprächs
