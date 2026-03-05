@@ -420,7 +420,13 @@
   stops.forEach(stop => {
     const el = document.getElementById(stop.id);
     if (!el) return;
-    const map = L.map(el, { zoomControl: true, attributionControl: false, scrollWheelZoom: false })
+    const map = L.map(el, {
+                    zoomControl: true,
+                    attributionControl: false,
+                    scrollWheelZoom: false,
+                    dragging: false,        // kein Pan auf Mobile
+                    tap: false              // kein Tap-Handler
+                  })
                  .setView([stop.lat, stop.lng], 14);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
     L.circleMarker([stop.lat, stop.lng], {
